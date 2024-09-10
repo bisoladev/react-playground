@@ -1,9 +1,12 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Sidebar from "./appLayout";
+
+const router = createBrowserRouter([{ path: "/", element: <Sidebar /> }]);
+
 function App() {
   return (
     <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <RouterProvider router={router} />
     </>
   );
 }
